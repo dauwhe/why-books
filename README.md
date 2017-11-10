@@ -54,6 +54,13 @@ I want to save a copy of the book. I suppose I could go through each HTML docume
 
 What if I want to find something in the book? I hit command-F in my browser, and I can search the current document, but not the book. I have to go to google and type a search term followed by site:resilientwebdesign.com.
 
+![Google Site Search](images/google-site-search.png)
+
+It's much easier in iBooks:
+
+![iBooks search](images/ibooks-search.png)
+
+
 
 ## 8. Highlights.
 
