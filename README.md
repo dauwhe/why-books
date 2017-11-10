@@ -18,6 +18,18 @@ If you're using Opera 12, you can read the entire book just by clicking the spac
 
 ## 3. It's late; I'll read the rest tomorrow.
 
+I read half of chapter three, and then have to do something else with my browser. 
+
+If I can get back to the URL with the forward or back button on my browser, it will remember that I'm halfway down the page because of the back/forward cache. If I have to reload the URL, or if I quit the browser, I'm out of luck.
+
+## 4. This font hurts my eyes.
+
+With regular browser pages, if you want to change the font, you have to figure out how user stylesheets work, and write some CSS. It's not so simple that a C-level executive can do it.
+
+If I switch to a browser reading mode, the situation is better. I might be able to choose a serif or sans-serif font. I can change the background. I can easily make the text bigger.
+
+
+
 
 
 ## 4.  Search
