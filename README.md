@@ -7,7 +7,7 @@ Is a book a web site? A progressive web app? Something more? Does the web need n
 
 It's so much easier to talk about something when you have something to talk about.
 
-When talking about web books, I like to look at Jeremy Keith's [Resilient Web Design](https://resilientwebdesign.com/). I think of this as the state of the art for books on the web today. Let's start reading. 
+When talking about web books, I like to look at Jeremy Keith's [Resilient Web Design](https://resilientwebdesign.com/) (henceforth "RWD"). I think of this as the state of the art for books on the web today. Let's start reading. 
 
 
 ## 2. Ideas of Order
@@ -16,7 +16,7 @@ What's important about books fits in a single sentence—chapter two comes after
 
 With RWD, we have a landing page with a table of contents. We can click on "Introduction," which comes next. Or there's the same link from the "begin reading now" text. 
 
-But, if you're using Opera 12, you can read the entire book just by clicking the space bar. That's because of the magic of rel=next, HTML's way of defining a sequence of documents. Sadly, current browsers don't seem to do much with the [sequential link types](https://html.spec.whatwg.org/#sequential-link-types).
+But, if you're using Opera 12, you can read the entire book just by clicking the space bar. That's because of the magic of rel=next, HTML’s way of defining a sequence of documents. Sadly, current browsers don't seem to do much with the [sequential link types](https://html.spec.whatwg.org/#sequential-link-types).
 
 
 ## 3. I'll Finish It Tomorrow
@@ -69,6 +69,22 @@ Almost uniquely, for something on the web, RWD does have an index. But if I find
 ## 8. Highlights.
 
 Highlights, bookmarks, annotations--the web is working on this. 
+
+
+
+## Epilogue: What Have We learned?
+
+1. We have a finite sequence of web resources,
+
+2. With user requirements around 
+
+search, 
+personalization, 
+annotation,
+saving state,
+and robust offline support.
+
+3. That's it!
 
 
 
