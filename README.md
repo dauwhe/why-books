@@ -52,13 +52,17 @@ I want to save a copy of the book. I suppose I could go through each HTML docume
 
 ## 7.  Search
 
-What if I want to find something in the book? I hit command-F in my browser, and I can search the current document, but not the book. I have to go to google and type a search term followed by site:resilientwebdesign.com.
+What if I want to find something in the book? I hit command-F in my browser, and I can search the current document, but not the book. 
+
+I have to go to google and type a search term followed by site:resilientwebdesign.com.
 
 ![Google Site Search](images/google-site-search.png)
 
 It's much easier in iBooks:
 
 ![iBooks search](images/ibooks-search.png)
+
+Almost uniquely, for something on the web, RWD does have an index. But if I find "Postel" in the index, it only links to the chapter 4 discussion, not the mention in chapter 5.
 
 
 
