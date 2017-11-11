@@ -48,7 +48,9 @@ I'm reading RWP on the train, and go into a tunnel (let's pretend we're in Europ
 
 ## 6. Mine.
 
-I want to save a copy of the book. I suppose I could go through each HTML document in turn and save via the browser.
+I want to save a copy of the book. Easy on Android, harder on iOS, really difficult on desktop. 
+
+What happens if the server goes away? What if I want to back up my copy of the book? 
 
 ## 7.  Search
 
@@ -69,6 +71,12 @@ Almost uniquely, for something on the web, RWD does have an index. But if I find
 ## 8. Highlights.
 
 Highlights, bookmarks, annotations--the web is working on this. 
+
+## 9. Navigate
+
+There are nine copies of the table of contents in RWD. 
+
+EPUB is infamous for duplication, but there are usually only two copies of the TOC in a book.
 
 
 
