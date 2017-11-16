@@ -1,45 +1,93 @@
-# Reading a book on the web
+# Books in Browsers
 
-Is a book a web site? A progressive web app? Something more? Does the web need new features to truly support books? What can we learn from experiments with web books, from the experience of EPUB, from the history of browsers?
+Is a book a web site? A progressive web app? Something more? Does the web need new features to truly support books? What can we learn from experiments with web books, from the experience of EPUB, from the history of browsers? What features/affordances/behaviors are needed for something to be a book on the web?
 
+## What Makes a Book a Book?
 
-## 1. Web Books: What's Out There?
+Books have a beginning and an end. They are long, and long-lasting. Users may spend dozens or hundreds of hours with a book. Readers may come back an hour, a week, or a year later, hoping to return to where they left off. They may still refer to it a year, or a decade, after first reading it. They may read it dozens of times. They want the book to be available even if the publisher goes away. They want a reading environment that will remember where they are, and adapt to their needs.
 
-It's so much easier to talk about something when you have something to talk about.
+But it's not that useful to talk about books in the abstract. 
+
+## The State of the Art: An Evaluation of a current Web Book
 
 When talking about web books, I like to look at Jeremy Keith's [Resilient Web Design](https://resilientwebdesign.com/) (henceforth "RWD"). I think of this as the state of the art for books on the web today.
 
+### Navigation
 
-## 2. Ideas of Order: Document Boundaries and Sequence
+When you go to the book's URL, you see a landing page with a table of contents. You can click on "Introduction," which comes next. The "begin reading now" link takes you to the same place. Navigation through the book works entirely via HTML links. The reader is gently encouraged to read in sequence. Note that this means there are nine copies of the TOC in the book (not counting those in the AMP version of each page). Even the famously-duplicative EPUB doesn't have that many copies of a TOC.
 
-What's important about books fits in a single sentence—chapter two comes after chapter one, but they're both part of the same book.
+But, if you're using Opera 12, you can read the entire book just by clicking the space bar. That's because of the magic of `rel=next`, HTML’s way of defining a sequence of documents. Sadly, current browsers don't seem to do much with [sequential link types](https://html.spec.whatwg.org/#sequential-link-types).
 
-With RWD, we have a landing page with a table of contents. We can click on "Introduction," which comes next. Or there's the same link from the "begin reading now" text. 
+### Search
 
-But, if you're using Opera 12, you can read the entire book just by clicking the space bar. That's because of the magic of rel=next, HTML’s way of defining a sequence of documents. Sadly, current browsers don't seem to do much with the [sequential link types](https://html.spec.whatwg.org/#sequential-link-types).
+Browsers let me search in the current page, but not in the whole book. I have to go to google and type a search term followed by site:resilientwebdesign.com.
 
-### What we've tried
+It's much easier in iBooks, where I get a list of every occurence of the search term, across files.
+
+Almost uniquely, for something on the web, RWD does have an index. But if I find "Postel" in the index, it only links to the chapter 4 discussion, not the mention in chapter 5.
+
+### Personalization
+
+If I want to change the background color, or use an easier-to-read font, I have several choices:
+
+1. Use Firefox's Reader View. Sadly, this also removes the navigation, so you can't move to the next chapter without turning off reader view (or guessing the URL and typing it in the URL bar). Safari Reading Mode also removes navigation, but doesn't have customization of font choice or "night mode".
+
+2. It's possible to make global font changes in some browser's preferences.  
+
+3. Create a user stylesheet. This is so simple I could *probably* do it.
+
+4. Fork the project on GitHub and edit the CSS.
+
+### Access
+
+People want unfettered access to their books. The book shouldn't disappear because the proverbial train went in the tunnel, the router broke, or the website shut down. RWD does have a service worker, so the content can be cached. But that cache is at risk of being deleted by the browser itself.
+
+I could try to save the individual pages from the browser interface. But this gets messy quickly, and what if I need a web server to properly view the content?
+
+
+
+### Annotations
+
+Human-text interaction has been in incubation for thousands of years. People write in their books, highlight them, dog-ear the pages, use bookmarks. These things have also proved useful for reading long-form electronic texts. Now all I have to do to make these things work on the book is to install a browser extension and sign up for an account with some annotation service. 
+
+
+## Principles
+
+
+### 1. A Book is finite, bounded, and ordered.
+
+Chapter two comes after chapter one. There is a beginning and an end. Order matters. 
+
+
+
+### Possible Techniques for expressing order and boundedness
 
 1. Using `<nav>` element to describe ordered list of links that make up the publication.
 
 Pros: very webby, needed anyway, just the right semantics.
 
-Cons: not JSON, doesn't work well for more experimental publications?, people keep saying their book doesn't need a TOC
+Cons: not JSON, doesn't work well for more experimental publications?, people keep saying their book doesn't need a TOC.
 
-2. XML. EPUB has an xml package file, that contains an ordered list of primary resources ("the guide")
+2. XML. EPUB has an xml package file, that contains an ordered list of primary resources ("the guide" as well as an unordered list of all resource "the manifest")
 
 Pros: Works. 
 
-Cons: XML.
+Cons: XML, some duplication, confusing id/idref structure
 
-3. rel=prev/next.
+3. rel=prev/next/first/last
 
 Pros. Webby. 
 
-Cons. Still need global information
+Cons. Still need global information. Browsers do nothing with this information.
+
+4. Scope. 
+
+Pros: Webby. 
+
+Cons: Can express membership but not order.
 
 
-## 3. I'll Finish It Tomorrow: Retaining State
+## 2. Retaining State
 
 I read half of chapter three, and then had to do something else with my browser. 
 
@@ -98,32 +146,33 @@ From a SW cache, you can programmatically create EPUB, ZIP, the new Google Web P
 
 What if I want to find something in the book? I hit command-F in my browser, and I can search the current document, but not the book. 
 
-I have to go to google and type a search term followed by site:resilientwebdesign.com.
-
-![Google Site Search](images/google-site-search.png)
-
-It's much easier in iBooks:
-
-![iBooks search](images/ibooks-search.png)
-
-Almost uniquely, for something on the web, RWD does have an index. But if I find "Postel" in the index, it only links to the chapter 4 discussion, not the mention in chapter 5.
-
 ### What we've tried
 
 I did a prototype where the <nav> element defined the book contents and structure. I created link/@rel=import for each item, and then used HTML imports to add them to the original DOM. Kinda messy, but browser search then works for the whole publication :)
 
-## 8. Highlights.
+## 8. Show me. Share with me. Cite me. Address me. Point to me. 
+
+A scientist or scholar or student needs to be able to point to anything from an entire book to a single word. 
+
+## 9. Highlights.
 
 Highlights, bookmarks, annotations--the web is working on this. 
 
-## 9. Navigate
+## 10. Navigate
 
-There are nine copies of the table of contents in RWD. 
 
-EPUB is infamous for duplication, but there are usually only two copies of the TOC in a book.
 
 
 ### What we've tried
+
+## 11. Bookshelves
+
+I have lots of books. I try to keep them organized. 
+
+
+
+
+
 
 
 ## Epilogue: What Have We learned?
