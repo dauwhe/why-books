@@ -56,7 +56,7 @@ Human-text interaction has been in incubation for thousands of years. People wri
 
 ### 1. A Book is finite, bounded, and ordered.
 
-Chapter two comes after chapter one. There is a beginning and an end. Order matters. 
+Chapter two comes after chapter one. There is a beginning and an end. Order matters. Some books might not be read in the same sequence all the time, but there is always a default sequence.
 
 
 
@@ -64,7 +64,7 @@ Chapter two comes after chapter one. There is a beginning and an end. Order matt
 
 1. Using `<nav>` element to describe ordered list of links that make up the publication.
 
-Pros: very webby, needed anyway, just the right semantics.
+Pros: very webby, needed anyway, just the right semantics, accessible.
 
 Cons: not JSON, doesn't work well for more experimental publications?, people keep saying their book doesn't need a TOC.
 
@@ -153,6 +153,11 @@ I did a prototype where the <nav> element defined the book contents and structur
 ## 8. Show me. Share with me. Cite me. Address me. Point to me. 
 
 A scientist or scholar or student needs to be able to point to anything from an entire book to a single word. 
+
+### What we've tried
+There is an expansion of Web Annotations in progress (https://github.com/w3c/publ-loc). It relies on UAs supporting the Web Annotations selectors model. 
+
+There are many other methods for citation in HTML. Some rely on IDs (messy). Some rely on XPath (we hate the letter X). Some rely on similar methods to Web Annotations, but are not standardized. Science likes structure.
 
 ## 9. Highlights.
 
