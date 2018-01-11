@@ -28,7 +28,7 @@ We work in publishing because we love books. We work with ebooks because we're i
 
 But does anyone else want change? Laura Brady wrote an article here on the [slow adoption of EPUB 3](http://epubsecrets.com/on-the-slow-adoption-of-epub-3.php) just last month; the very same EPUB 3 which became an official recommendation in October of 2011. After more than six years of EPUB 3, EPUB 2 is alive and well. Even my employer, one of the largest publishers in the world, makes EPUB 3s which are as close to EPUB 2 as possible. The `ncx` refuses to die.
 
-There are two problems. First, EPUB 2 is often "good enough". Most books are better without video. It's hard to use some HTML5 features due to poor implementations in older reading systems. Many of the benefits of better accessibility are more theoretical than actual right now—how many reading systems do useful things with `epub:type`? 
+There are two problems. First, EPUB 2 is often "good enough". Most books are better without video. It's hard to use some HTML5 features due to poor implementations in older reading systems. Many of the benefits of better accessibility are more theoretical than actual right now—how many reading systems do useful things with `epub:type`? James Patterson books work in OEB 1.0. Everything since then has been details.
 
 Second, the lines between versions of EPUB are often blurry. Many of us remember fixed-layout EPUB 2, or EPUB 2 with audio. Our EPUB 3's have ncx files. Reading system support is far more variable than the specs are. Most EPUB 3.0.1 files are indistinguishable from EPUB 3.0 files.
 
