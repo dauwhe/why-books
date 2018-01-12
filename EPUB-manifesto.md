@@ -97,11 +97,15 @@ Eventually, EPUB should get out of the business of policing HTML and CSS—those
 
 ### 4. Make change compelling
 
-Creating EPUB 3.2, or 3.0.2, is not going to make more people adopt a new version. The cost is too high; the benefits too small or too uncertain. 
+Creating EPUB 3.2, or 3.0.2, is not going to make more people adopt a new version. The cost is too high; the benefits too small or too uncertain. Even if you think you can just run a script to update something small, do you really want to risk touching every single book you've ever published? Do you want to redo expensive QA?
+
+If we want people to upgrade, we need to create something worth upgrading to. I would love it if script worked everywhere, if I had persistent local storage, if I could have images that filled the reader's screen. 
 
 ### 5. Build, then specify
 
-TK
+Yes, let's imagine and then create great new features. But let's make sure they work first, that people want them, that they're well designed, that reading systems can support them. EPUB has been a field where dreams are crushed—we built it, and they didn't come. The web community learned a long time ago that a specification isn't real until it's implemented, and you can't discover all the problems without using it. We must learn this lesson, and require multiple interoperable implementations before specifications are final. 
+
+EPUB *has* evolved, but largely in ways we don't recognize. CSS Flexbox now works in iBooks, because the underlying browser engine was updated. How can our specs recognize when things like that happen? The state of the art will evolve. 
 
 
 
