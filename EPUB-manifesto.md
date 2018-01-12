@@ -15,7 +15,7 @@ It all started with a rant to some of my #eprdctn friends (who are my real-life 
 11:32 dauwhe: Even with EPUB4 or WP or PWP, how can we make it compelling enough for people to want to use them?
 11:32 dauwhe: James Patterson works in OEB 1.0. Everything since has been minor details.
 ```
-Why was I thinking about this? Late last year, work began quietly on a proposal to undo some of the changes in EPUB 3.1, create a new EPUB 3.0.2 spec, and then abandon EPUB 3.1. The stated motivation was for EPUB 3.0.2 to be entirely backward-compatible with EPUB 3.0.1: all existing EPUB 3.0.1 files would automatically be valid EPUB 3.0.2s. I believe one of the  unstated motivations was for existing files to be automatically compatible with the “newest” version of EPUB, without having to make any changes (especially to the `package` version attribute).
+Why was I thinking about this? Late last year, work began quietly on a [proposal](https://docs.google.com/document/d/1r2RbLipc5VY3vUp_iuPak3oaNxI5BF9gJ5s-98qsmEY/edit) to undo some of the changes in [EPUB 3.1](https://w3c.github.io/publ-epub-revision/epub31/spec/epub-spec.html), create a new EPUB 3.0.2 spec, and then abandon EPUB 3.1. The stated motivation was for EPUB 3.0.2 to be entirely backward-compatible with EPUB 3.0.1: all existing EPUB 3.0.1 files would automatically be valid EPUB 3.0.2s. I believe one of the  unstated motivations was for existing files to be automatically compatible with the “newest” version of EPUB, without having to make any changes (especially to the `package` version attribute).
 
 This bothered me, both rejecting the good work in EPUB 3.1, and the idea of going backwards in version. But there were good arguments that everyone was doing the right thing. EPUB 3.1 made sense because we were removing features which hardly anyone used, and weren’t well supported. Did any of you use `bindings`? But it also makes sense not to make old content invalid. So who’s right? What should we do? Can we make EPUB better without breaking anything? 
 
@@ -57,7 +57,9 @@ The question remains: how do we move forward? Perhaps we can learn something fro
 
 3. Browsers are well-tested and constantly upgraded.
 
-4. EPUBs are sold and displayed by someone else. Web sites don’t have intermediaries rewriting their content, injecting scripts, and generally changing their behavior randomly. 
+4. EPUBs are sold and displayed by someone else. Web sites don’t have intermediaries rewriting their content, injecting scripts, and generally changing their behavior randomly.
+
+5. All the major browser vendors participate in the web standards process. Most major EPUB reading systems do not participate in EPUB standards.  
 
 But, acknowledging all those differences, what should we do?
 
@@ -105,7 +107,13 @@ If we want people to upgrade, we need to create something worth upgrading to. I 
 
 Yes, let’s imagine and then create great new features. But let’s make sure they work first, that people want them, that they’re well designed, that reading systems can support them. EPUB has been a field where dreams are crushed—we built it, and they didn’t come. The web community learned a long time ago that a specification isn’t real until it’s implemented, and you can’t discover all the problems without using it. We must learn this lesson, and **require multiple interoperable implementations before specifications are final**. 
 
-EPUB *has* evolved, but largely in ways we don’t recognize. CSS Flexbox now works in iBooks, because the underlying browser engine was updated. How can our specs recognize when things like that happen? The state of the art will evolve.
+EPUB *has* evolved, but largely in ways we don’t recognize. CSS Flexbox now works in iBooks, because the underlying browser engine was updated. How can our specs recognize when things like that happen? The state of the art *will* evolve, no matter what we do. 
+
+## What Do You Think?
+
+
+How can EPUB move forward without abandoning existing books? How do we create specifications that match reality? How can we get our community more involved in shaping the future of ebooks? I would love to hear your thoughts, in comments, on [twitter](https://twitter.com/hashtag/eprdctn?src=hash), in the [community group](https://github.com/w3c/publ-cg), anywhere!
+
 
 
 
