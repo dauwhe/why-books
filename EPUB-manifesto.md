@@ -66,7 +66,7 @@ But, acknowledging all those differences, what should we do?
 
 Before we change EPUB any more, we need to find out what is supported today. EPUB creators are less interested in what *should* work than in what *does* work. Let’s create a version of EPUB that is thoroughly tested, that includes **only** features that are widely implemented, that is fact instead of fiction.
 
-To do this we need tests, and we need lots of reading systems that pass the tests. **What is the interoperable core of EPUB; what features can be trusted everywhere?** Let’s find out.
+To do this we need tests, and we need lots of reading systems that pass the tests. **What is the interoperable core of EPUB? What features can be trusted everywhere?** Let’s find out.
 
 ### 2. More nuanced validation.
 
