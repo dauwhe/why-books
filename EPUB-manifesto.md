@@ -70,13 +70,13 @@ To do this we need tests, and we need lots of reading systems that pass the test
 
 ### 2. More nuanced validation.
 
-EPUBCheck is the piller of our community, the center of our workflows, the true arbiter of what is EPUB and what isn’t. But this sophisticated tool is too often used in a simplistic way. `No errors or warnings` is good; literally anything else is bad. 
+EPUBCheck is the piller of our community, the center of our workflows, the true arbiter of what EPUB is and what EPUB isn’t. But this sophisticated tool is too often used in a simplistic way. `No errors or warnings` is good; literally anything else is bad. 
 
 We’re afraid to allow EPUBCheck to provide more information by default. Even the specs say that EPUB creators should be alerted if an EPUB contains deprecated features. But the spec also says that alert should be less severe than an error or warning, and so no one ever sees the alert.
 
-What would happen if we used EPUBCheck differently? Instead of telling EPUBCheck that I’m an EPUB 3, what if EPUBCheck recognized what features I actually used, and then described my level of compatibility? Most of our EPUB3s work as EPUB 2. Why not say so?
+What would happen if we used EPUBCheck differently? Instead of telling EPUBCheck that I’m an EPUB 3, what if EPUBCheck recognized what features I actually used, and then described my level of compatibility? Most of our EPUB3s work as EPUB 2. Why not say so? What we’re really checking for is a match between the content and the reading system.
 
-We’ve also talked about the possibility of a `strict` mode for EPUBCheck, where all obsolete or deprecated features would be forbidden. 
+We’ve also talked about the possibility of a `strict` mode for EPUBCheck, where all obsolete or deprecated features would be forbidden. And there are errors of structure—is the package invalid in the XML sense?—and errors of features—content MathML isn’t part of the spec. Is there value in recognizing that an EPUB is structurally well-formed, even though it may include unrecognized features?
 
 ### 3. Trust HTML
 
