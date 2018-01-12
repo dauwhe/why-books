@@ -51,7 +51,7 @@ Second, the lines between versions of EPUB are often blurred. Many of us remembe
 The question remains: how do we move forward? Perhaps we can learn something from the web, and make old and new coexist more easily. But first, we need to be aware of how different EPUB-Land is from Web World:
 
 
-1. The EPUB ecosystem depends on formal validation, unlike the web. One interesting aspect of this is that many formally invalid EPUBs actually work. Most common reading systems already support `package version="3.1"`. You can use regular HTML without the "X" in some places. And, of course, we all know about the millions valid EPUBs which don’t work.
+1. The EPUB ecosystem depends on formal validation, unlike the web. One interesting aspect of this is that many formally invalid EPUBs actually work (at least when side-loaded). Most common reading systems already support `package version="3.1"`. You can use regular HTML without the "X" in some places. And, of course, we all know about the millions valid EPUBs which don’t work.
 
 2. There are many more EPUB Reading Systems than browsers, making research, testing, and QA that much harder, and sometimes impossible.
 
