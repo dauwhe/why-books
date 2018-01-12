@@ -1,4 +1,4 @@
-# “Don’t Break the Web” and the Future of EPUB
+# “Don’t Break the Web”: a meditation on the past, present and future of EPUB
 
 It all started with a rant to some of my #eprdctn friends (who are my real-life friends too; I love this community):
 
