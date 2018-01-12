@@ -70,7 +70,7 @@ To do this we need tests, and we need lots of reading systems that pass the test
 
 ### 2. More nuanced validation.
 
-EPUBCheck is the piller of our community, the center of our workflows, the true arbiter of what EPUB is and what EPUB isn’t. But this sophisticated tool is too often used in a simplistic way. `No errors or warnings` is good; literally anything else is bad. 
+EPUBCheck is the pillar of our community, the center of our workflows, the true arbiter of what EPUB is and what EPUB isn’t. But this sophisticated tool is too often used in a simplistic way. `No errors or warnings` is good; literally anything else is bad. 
 
 We’re afraid to allow EPUBCheck to provide more information by default. Even the specs say that EPUB creators should be alerted if an EPUB contains deprecated features. But the spec also says that alert should be less severe than an error or warning, and so no one ever sees the alert.
 
@@ -99,7 +99,7 @@ Eventually, EPUB should get out of the business of policing HTML and CSS—those
 
 Creating EPUB 3.2, or 3.0.2, is not going to make more people adopt a new version. The cost is too high; the benefits too small or too uncertain. Even if you think you can just run a script to update something small, do you really want to risk touching every single book you’ve ever published? Do you want to redo expensive QA?
 
-If we want people to upgrade, we need to create something worth upgrading to. I would love it if script worked everywhere, if I had persistent local storage, if I could have images that filled the reader’s screen. 
+If we want people to upgrade, we need to create something worth upgrading to. I would love it if script worked everywhere (a very hard problem), if I had persistent local storage, if I could have images that filled the reader’s screen. 
 
 ### 5. Build, then specify
 
