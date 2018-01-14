@@ -55,7 +55,7 @@ The question remains: how do we move forward? Perhaps we can learn something fro
 
 2. There are many more EPUB Reading Systems than browsers, making research, testing, and QA that much harder, and sometimes impossible.
 
-3. Browsers are well-tested and constantly upgraded.
+3. Browsers are well-tested and constantly upgraded. And **they have dev tools**.
 
 4. EPUBs are sold and displayed by someone else. Web sites don’t have intermediaries rewriting their content, injecting scripts, and generally changing their behavior randomly.
 
