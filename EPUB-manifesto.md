@@ -57,7 +57,7 @@ The question remains: how do we move forward? Perhaps we can learn something fro
 
 3. Browsers are well-tested and constantly upgraded. And **they have dev tools**.
 
-4. EPUBs are sold and displayed by someone else. Web sites don’t have intermediaries rewriting their content, injecting scripts, and generally changing their behavior randomly.
+4. EPUBs are sold and displayed by someone else. Web sites don’t have intermediaries rewriting their content and generally changing their behavior randomly.
 
 5. All the major browser vendors participate in the web standards process. Most major EPUB reading systems do not participate in EPUB standards.  
 
