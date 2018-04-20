@@ -88,6 +88,8 @@ Cons: Can express membership but not order.
 
 5. Transclusion
 
+Pulling other files into a master file has a long history in XML and other formats. HTML has (had?) web imports. Benjamin Young has [experimented](https://github.com/BigBlueHat/no-can-transclude) with pulling documents into an index file using iframes. This can work with no javascript! 
+
 
 ## 2. Retaining State
 
