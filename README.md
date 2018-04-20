@@ -72,7 +72,7 @@ Cons: not JSON, doesn't work well for more experimental publications?, people ke
 
 Pros: Works. 
 
-Cons: XML, some duplication, confusing id/idref structure
+Cons: XML, heavyweight, some duplication, confusing id/idref structure
 
 3. rel=prev/next/first/last
 
@@ -85,6 +85,8 @@ Cons. Still need global information. Browsers do nothing with this information.
 Pros: Webby. 
 
 Cons: Can express membership but not order.
+
+5. Transclusion
 
 
 ## 2. Retaining State
@@ -100,7 +102,6 @@ My ebook reader even remembers where I was after I switched from my phone to my 
 I actually don't know how ebook reading systems do this.
 
 
-
 ## 4. This Font Hurts My Eyes: Personalization
 
 With regular browser pages, if you want to change the font, you have to figure out how user stylesheets work, and write some CSS. It's not so simple that a C-level executive can do it.
@@ -111,9 +112,7 @@ All these features are routine in ebook readers.
 
 ### What we've tried
 
-1. Creating menu bar with JS with customization controls, then write style information to document 
-
-
+1. Creating menu bar with JS with customization controls, then writing style information to document 
 
 
 ## 5. Reading on the Train: Offline
@@ -124,12 +123,9 @@ I'm reading RWP on the train, and go into a tunnel (let's pretend we're in Europ
 
 Service workers! They work. Bigbluehat even found a sneaky way to cache secondary resources without an explicit list of them :)
 
-Issue: what happens when I come back to my book after a year?
+Issue: what happens when I come back to my book after a week, a month, or a year?
 
 Issue: what happens when I have a thousand books saved?
-
-
-
 
 
 ## 6. Mine.
@@ -140,7 +136,7 @@ What happens if the server goes away? What if I want to back up my copy of the b
 
 ### What we've tried
 
-From a SW cache, you can programmatically create EPUB, ZIP, the new Google Web Package, the old Jeni Tennison web package, whatever. 
+From a service worker cache, you can programmatically create EPUB, ZIP, the new Google Web Package, the old Jeni Tennison web package, whatever. 
 
 ## 7.  Search
 
@@ -148,7 +144,7 @@ What if I want to find something in the book? I hit command-F in my browser, and
 
 ### What we've tried
 
-I did a prototype where the <nav> element defined the book contents and structure. I created link/@rel=import for each item, and then used HTML imports to add them to the original DOM. Kinda messy, but browser search then works for the whole publication :)
+I did a prototype where the `<nav>` element defined the book contents and structure. I created `link/@rel=import` for each item, and then used HTML imports to add them to the original DOM. Kinda messy, but browser search then works for the whole publication :)
 
 ## 8. Show me. Share with me. Cite me. Address me. Point to me. 
 
@@ -156,7 +152,7 @@ A scientist or scholar or student needs to be able to point to anything from an 
 
 ## 9. Highlights.
 
-Highlights, bookmarks, annotations--the web is working on this. 
+Highlights, bookmarks, annotations—the web is working on this. 
 
 ## 10. Navigate
 
