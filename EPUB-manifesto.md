@@ -1,4 +1,4 @@
-# “Don’t Break the Web”: a meditation on the past, present and future of EPUB
+# Good Enough: A Meditation on the Past, Present and Future of EPUB
 
 It all started with a rant to some of my #eprdctn friends (who are my real-life friends too; I love this community):
 
@@ -17,7 +17,7 @@ It all started with a rant to some of my #eprdctn friends (who are my real-life 
 ```
 Why was I thinking about this? Late last year, work began quietly on a [proposal](https://docs.google.com/document/d/1r2RbLipc5VY3vUp_iuPak3oaNxI5BF9gJ5s-98qsmEY/edit) to undo some of the changes in [EPUB 3.1](https://w3c.github.io/publ-epub-revision/epub31/spec/epub-spec.html), create a new EPUB 3.0.2 spec, and then abandon EPUB 3.1. The stated motivation was for EPUB 3.0.2 to be entirely backward-compatible with EPUB 3.0.1: all existing EPUB 3.0.1 files would automatically be valid EPUB 3.0.2s. I believe one of the  unstated motivations was for existing files to be automatically compatible with the “newest” version of EPUB, without having to make any changes (especially to the `package` version attribute).
 
-This bothered me, both rejecting the good work in EPUB 3.1, and the idea of going backwards in version. But there were good arguments that everyone was doing the right thing. EPUB 3.1 made sense because we were removing features which hardly anyone used, and weren’t well supported. Did any of you use `bindings`? But it also makes sense not to make old content invalid. So who’s right? What should we do? Can we make EPUB better without breaking anything? 
+This bothered me, both rejecting the good work in EPUB 3.1, and the idea of going backwards in version. But there were good arguments that everyone was doing the right thing. EPUB 3.1 made sense because we were removing features which hardly anyone used, and weren’t well supported—did any of you use `bindings`? But it also makes sense not to make old content invalid. So who’s right? What should we do? Can we make EPUB better without breaking anything?
 
 ## Mistakes were made
 
@@ -28,7 +28,7 @@ Consider this HTML fragment:
 <font color=red>hello</font>
 ```
 
-Firefox 57.0.4, released last week, knows exactly what to do with this markup, even though the `font` element was deprecated twenty years ago, and removed entirely four years ago. The text is indeed red. *On the web, the old and the new coexist, if uneasily.*
+Firefox 57.0.4, released two weeks ago, knows exactly what to do with this markup, even though the `font` element was deprecated twenty years ago, and removed entirely four years ago. The text is indeed red. *On the web, the old and the new coexist, if uneasily.*
 
 `font` was a mistake. People realized that, and specs changed. But why does `font` still work? Because of one rule: **don’t break the web**. If even three in ten thousand web sites use a feature, and removing a feature might render those sites unreadable, browsers won’t remove it. The web has to be careful, because mistakes are permanent. 
 
@@ -40,11 +40,11 @@ Twenty years into the age of ebooks, our community is trying to figure out what 
 
 We work in publishing because we love books. We work with ebooks because we’re both idealists and gluttons for punishment. We are full of frustration with the present and hope for the future. We want things to be better; we want change; we need change.
 
-But does anyone else want change? Laura Brady wrote an article here on the [slow adoption of EPUB 3](http://epubsecrets.com/on-the-slow-adoption-of-epub-3.php) just last month; the very same EPUB 3 which became an official recommendation in October of 2011. After more than six years of EPUB 3, EPUB 2 is alive and well. Even my employer, one of the largest publishers in the world, makes EPUB 3s which are as close to EPUB 2 as possible. The `ncx` refuses to die.
+But does anyone else want change? Laura Brady wrote an article on the [slow adoption of EPUB 3](http://epubsecrets.com/on-the-slow-adoption-of-epub-3.php) just last month; the very same EPUB 3 which became an official recommendation in October of 2011. After more than six years of EPUB 3, EPUB 2 is alive and well. Even my employer, one of the largest publishers in the world, makes EPUB 3s which are as close to EPUB 2 as possible. The `ncx` refuses to die.
 
-There are two problems. First, EPUB 2 is often *good enough*. Most books are better without video. It’s hard to use some new HTML5 features due to poor implementations in older reading systems. Many accessibility benefits have spotty support—how many reading systems render MathML or expose ARIA attributes?
+There are two problems. First, **EPUB 2 is often good enough**. Most books are better without video. It’s hard to use some new HTML5 features due to poor implementations in older reading systems. Many accessibility benefits have spotty support—how many reading systems render MathML, or expose ARIA attributes?
 
-Second, the lines between versions of EPUB are often blurred. Many of us remember fixed-layout EPUB 2, or EPUB 2 with audio. Our EPUB 3 files include the dreaded `ncx`. Reading system support is far more variable than the specifications are. Most EPUB 3.0.1 files are indistinguishable from EPUB 3.0 files.
+Second, the lines between versions of EPUB are often blurred. Many of us remember fixed-layout EPUB 2, or EPUB 2 with audio. Our EPUB 3 files include the dreaded `ncx`. **Reading system support is far more variable than the specifications are**. Most EPUB 3.0.1 files are indistinguishable from EPUB 3.0 files.
 
 ## Moving Forward
 
@@ -59,7 +59,9 @@ The question remains: how do we move forward? Perhaps we can learn something fro
 
 4. EPUBs are sold and displayed by someone else. Web sites don’t have intermediaries rewriting their content and generally changing their behavior randomly.
 
-5. All the major browser vendors participate in the web standards process. Most major EPUB reading systems do not participate in EPUB standards.  
+5. All the major browser vendors participate in the web standards process. Most major EPUB reading systems do not participate in EPUB standards.
+
+6. EPUB is often not used directly, but converted into something else. What percentage of EPUBs created today are converted to Mobi formats by Amazon? 
 
 But, acknowledging all those differences, what should we do?
 
@@ -76,7 +78,7 @@ EPUBCheck is the pillar of our community, the center of our workflows, the true 
 
 We’re afraid to allow EPUBCheck to provide more information by default. Even the specs say that EPUB creators should be alerted if an EPUB contains deprecated features. But the spec also says that alert should be less severe than an error or warning, and so no one ever sees the alert.
 
-What would happen if we used EPUBCheck differently? Instead of telling EPUBCheck that I’m an EPUB 3, what if EPUBCheck recognized what features I actually used, and then described my level of compatibility? Most of our EPUB3s work as EPUB 2. Why not say so? What we’re really checking for is a match between the content and the reading system.
+What would happen if we used EPUBCheck differently? Instead of telling EPUBCheck that I’m an EPUB 3, what if EPUBCheck recognized what features I actually used, and then described my level of compatibility? Most of our EPUB3s work as EPUB 2. Why not say so? What we’re really checking for is a match between the content and the reading system, not between the content and the spec. 
 
 We’ve also talked about the possibility of a `strict` mode for EPUBCheck, where all obsolete or deprecated features would be forbidden. And there are errors of structure—is the package invalid in the XML sense?—and errors of features—content MathML isn’t part of the spec. Is there value in recognizing that an EPUB is structurally well-formed, even though it may include unrecognized features?
 
